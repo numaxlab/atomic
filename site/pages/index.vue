@@ -1,11 +1,8 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1>
-        NUMAX Laboratorio Atomic
-      </h1>
-    </div>
+  <div>
+    <h1>
+      NUMAX Laboratorio Atomic
+    </h1>
   </div>
 </template>
 
