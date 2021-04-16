@@ -48,6 +48,10 @@ export default {
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
+  generate: {
+    dir: '../docs'
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
