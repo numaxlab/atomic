@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "css/atomic": {
+      "css": [
+        "/css/atomic.css"
+      ]
+    }
+  }
+}

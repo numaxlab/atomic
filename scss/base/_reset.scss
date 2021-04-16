@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/reboot";
+
+body {
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern";
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+}
+
+img {
+    @include img-fluid;
+}
+
+ul {
+    list-style-type: disc;
+}

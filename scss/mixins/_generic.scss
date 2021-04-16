@@ -1,0 +1,10 @@
+@mixin undo-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border: 0;
+}

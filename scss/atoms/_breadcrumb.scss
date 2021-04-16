@@ -1,0 +1,15 @@
+.at-breadcrumb {
+    @include list-unstyled;
+
+    .breadcrumb-item {
+        display: inline;
+
+        &:not(:last-child) {
+            &::after {
+                display: inline-block;
+                content: $breadcrumb-separator;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

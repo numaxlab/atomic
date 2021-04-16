@@ -1,0 +1,31 @@
+{
+  "name": "@numaxlab/atomic",
+  "version": "1.0.0",
+  "description": "Atomic is a UI framework based in Bootstrap and Vue",
+  "repository": "https://github.com/numaxlab/atomic",
+  "author": "Laboratorio NUMAX",
+  "license": "MIT",
+  "scripts": {
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^1.1.2",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
+    "postcss-loader": "^5.2.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
+    "webpack-notifier": "^1.6.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
