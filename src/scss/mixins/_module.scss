@@ -1,0 +1,41 @@
+@mixin module {
+    &.is-xl {
+        min-height: 20rem;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 23.438rem;
+            grid-column: auto / span 8;
+            grid-row: auto / span 2;
+        }
+    }
+
+    &.is-l {
+        min-height: 20rem;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 23.438rem;
+            grid-column: auto / span 6;
+            grid-row: auto / span 2;
+        }
+    }
+
+    &.is-m {
+        min-height: 10rem;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 22.5rem;
+            grid-column: auto / span 4;
+            grid-row: auto / span 2;
+        }
+    }
+
+    &.is-s {
+        min-height: 5rem;
+
+        @include media-breakpoint-up(md) {
+            min-height: 11.25rem;
+            grid-column: auto / span 4;
+            grid-row: auto / span 1;
+        }
+    }
+}

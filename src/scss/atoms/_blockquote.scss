@@ -1,0 +1,5 @@
+blockquote,
+.at-blockquote {
+    border-inline-start: map-get($border-widths, 2) solid $border-color;
+    padding-inline-start: 1rem;
+}

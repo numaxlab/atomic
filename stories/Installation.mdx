@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Installation"/>
+
+# Installation
+
+First install Atomic Framework in your app with the npm package:
+```
+npm install @numaxlab/atomic
+```
+
+Once you have installed it you can choose two ways of using, extending and customizing Atomic Framework.
+
+## Compiled
+
+There is a compiled version of the framework shipped with the npm package. You can find it in
+```@numaxlab/atomic/dist/css/numaxlab-atomic.css```. Just copy it to your project with your preferred asset building
+tool and include it in your HTML head:
+```html
+<link href="/css/numaxlab-atomic.css" rel="stylesheet">
+```
+
+## Sass
+
+If you want a higher customization and use the Sass source you have two options. In your project's ```custom.scss``` file
+do either of these:
+
+1. Import the whole framework
+
+```scss
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "@numaxlab/atomic/src/numaxlab-atomic";
+
+// Then add any customization or additional code here
+
+```
+
+2. Import only the needed parts
+
+```scss
+
+// 1. Import functions
+@import "@numaxlab/atomic/src/utilities/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Initialize framework
+@import "@numaxlab/atomic/src/utilities/init";
+
+// 4. Import base styles
+@import "@numaxlab/atomic/src/base/all";
+
+// 5. Import the needed components only
+
+// 6. Import your custom components or your project component extending the framework ones
+
+```

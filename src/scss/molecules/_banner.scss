@@ -1,0 +1,28 @@
+@use "sass:math";
+
+$banner-padding: 1.875rem;
+
+.ml-banner {
+    @include module;
+
+    position: relative;
+    margin-left: -(math.div($grid-gutter-width, 2));
+    margin-right: -(math.div($grid-gutter-width, 2));
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+
+    .banner-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .banner-content-wrapper {
+        position: relative;
+        width: 100%;
+        padding: $banner-padding;
+        z-index: 3;
+    }
+}

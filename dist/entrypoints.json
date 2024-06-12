@@ -1,8 +1,8 @@
 {
   "entrypoints": {
-    "css/atomic": {
+    "css/numaxlab-atomic": {
       "css": [
-        "/css/atomic.css"
+        "/css/numaxlab-atomic.css"
       ]
     }
   }

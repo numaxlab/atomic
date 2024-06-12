@@ -1,0 +1,16 @@
+// Variables
+@import "variables/main";
+
+// Bootstrap variables
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/variables-dark";
+@import "~bootstrap/scss/maps";
+
+// Bootstrap mixins and utilities
+@import "~bootstrap/scss/mixins";
+
+// Project mixins
+@import "../mixins/generic";
+@import "../mixins/title";
+@import "../mixins/text";
+@import "../mixins/module";
