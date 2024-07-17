@@ -1,0 +1,15 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks'
+import * as SmallStories from './Small.stories'
+
+<Meta of={SmallStories}/>
+
+# Small
+
+<Canvas of={SmallStories.Single}/>
+<Controls/>
+
+## Variables Sass
+
+```scss
+$small-font-size: .875rem;
+```

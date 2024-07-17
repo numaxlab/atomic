@@ -6,7 +6,6 @@ type SmallArgs = {
 
 const meta: Meta<SmallArgs> = {
   title: 'Atoms/Small',
-  tags: ['autodocs'],
   render: (args) => {
     const small = document.createElement('small')
     small.innerText = args.label
@@ -27,7 +26,7 @@ export default meta
 
 type Story = StoryObj<SmallArgs>;
 
-export const SmallStories: Story = {
+export const Single: Story = {
   args: {
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
   },

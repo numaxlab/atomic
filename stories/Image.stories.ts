@@ -16,6 +16,7 @@ const meta: Meta<ImageArgs> = {
 
     img.src = args.src
     img.alt = args.alt
+    figCaption.className = 'image-caption'
     figCaption.innerText = args.caption
 
     figure.className = ['at-image'].join(' ')

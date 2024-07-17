@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks'
+import * as BannerStories from './Banner.stories'
+
+<Meta of={BannerStories}/>
+
+# Banner
+
+<Canvas of={BannerStories.Primary}/>
+<Controls/>
+
+## Variables Sass
+
+Documentación das variables Sass.
+
+## Compoñente Blade (Laravel)
+
+```html
+<x-numaxlab-atomic::molecules.banner
+        class="is-primary is-m has-media"
+        href="https://example.com"
+        image-src="https://picsum.photos/1200/800"
+>
+    Título do báner
+
+    <x-slot name="content">
+        <p>Contido do báner</p>
+    </x-slot>
+</x-numaxlab-atomic::molecules.banner>
+```

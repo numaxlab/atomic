@@ -1,6 +1,9 @@
+@use "sass:math";
+
 .at-tag {
+    @include font-size($small-font-size);
     border: solid $border-width $black;
-    padding: $spacer / 2 $spacer;
+    padding: math.div($spacer, 2) $spacer;
     color: $black;
 
     &.is-primary {

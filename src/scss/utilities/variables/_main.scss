@@ -8,7 +8,25 @@ $gray: $gray-400 !default;
 $black: #000000 !default;
 $green: #487629 !default;
 $yellow: #FFC107 !default;
+$yellow-100: tint-color($yellow, 80%) !default;
 $red: #FF0000 !default;
+
+$grays: (
+        "400": $gray-400,
+        "600": $gray-600,
+) !default;
+
+$colors: (
+        "white": $white,
+        "gray": $gray,
+        "black": $black,
+        "green": $green,
+        "yellow": $yellow,
+        "red": $red,
+) !default;
+
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 4.5 !default;
 
 $primary: #0000FF !default;
 $secondary: $gray-600 !default;
@@ -24,6 +42,18 @@ $theme-colors: (
         "danger": $danger,
 ) !default;
 
+$theme-colors-text: $theme-colors !default;
+
+$theme-colors-bg-subtle: (
+        "primary": tint-color($primary, 90%),
+        "secondary": $white,
+        "success": tint-color($success, 90%),
+        "warning": tint-color($warning, 90%),
+        "danger": tint-color($danger, 90%),
+) !default;
+
+$theme-colors-border-subtle: $theme-colors !default;
+
 
 // Options
 //
@@ -37,6 +67,8 @@ $enable-transitions: true !default;
 $enable-reduced-motion: true !default;
 $enable-smooth-scroll: true !default;
 $enable-grid-classes: true !default;
+$enable-container-classes: true !default;
+$enable-cssgrid: false !default;
 $enable-button-pointers: true !default;
 $enable-rfs: true !default;
 $enable-validation-icons: true !default;
@@ -44,12 +76,18 @@ $enable-negative-margins: false !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities: true !default;
 
+$enable-dark-mode: true !default;
+$color-mode-type: data !default; // `data` or `media-query`
 
 // Prefix for :root CSS variables
 //
 
-$variable-prefix: nla- !default;
+$prefix: nla- !default;
 
+// Gradient
+//
+
+$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 
 // Spacing
 //
@@ -70,8 +108,8 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // Body
 //
 
-$body-bg: $white !default;
 $body-color: $black !default;
+$body-bg: $white !default;
 $body-text-align: null !default;
 
 // Links
@@ -89,15 +127,60 @@ $stretched-link-z-index: 1 !default;
 // Paragraphs
 //
 
-$paragraph-margin-bottom: .5rem !default;
+$paragraph-margin-bottom: 1rem !default;
+
+// Grid
+//
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+
+$container-padding-x: $grid-gutter-width !default;
+
 
 // Components
 //
 // Define common padding and border radius sizes and more.
 
+$border-width: 1px !default;
+$border-widths: (
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px
+) !default;
+$border-style: solid !default;
+$border-color: $gray-400 !default;
+
 $border-radius: 0 !default;
 
 $breadcrumb-separator: '/' !default;
+
+$aspect-ratios: (
+        "1x1": 100%,
+        "4x3": calc(3 / 4 * 100%),
+        "16x9": calc(9 / 16 * 100%),
+        "21x9": calc(9 / 21 * 100%)
+) !default;
 
 @import "typography";
 @import "forms";

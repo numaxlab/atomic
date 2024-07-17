@@ -1,43 +1,47 @@
 import { Meta } from '@storybook/blocks'
 
-<Meta title="Installation"/>
+<Meta title="Instalación"/>
 
 # Installation
 
-First install Atomic Framework in your app with the npm package:
+Primeiro install Atomic Framework na túa app con npm:
+
 ```
 npm install @numaxlab/atomic
 ```
 
-Once you have installed it you can choose two ways of using, extending and customizing Atomic Framework.
+Unha vez o tes instalado podes escoller dúas formas para empregalo, extendelo ou adaptalo.
 
-## Compiled
+## Versión compilada e lista para usar
 
-There is a compiled version of the framework shipped with the npm package. You can find it in
-```@numaxlab/atomic/dist/css/numaxlab-atomic.css```. Just copy it to your project with your preferred asset building
-tool and include it in your HTML head:
+Hai unha versión compilada do framework preparada no paquete npm. Podes atopala en
+```@numaxlab/atomic/dist/css/style.css``` xunto con ```@numaxlab/atomic/dist/css/fonts.css``` que contén as
+tipografías necesarias. Podes copiar estes arquivos ao teu proxecto e incluílos na cabeceira
+do teu HTML:
 ```html
-<link href="/css/numaxlab-atomic.css" rel="stylesheet">
+<link href="/css/numaxlab-atomic/fonts.css" rel="stylesheet">
+<link href="/css/numaxlab-atomic/icons.css" rel="stylesheet">
+<link href="/css/numaxlab-atomic/style.css" rel="stylesheet">
 ```
 
 ## Sass
 
-If you want a higher customization and use the Sass source you have two options. In your project's ```custom.scss``` file
-do either of these:
+Se queres un maior nivel de adaptación podes usar a fonte Sass a través de dúas opcións. Fai o seguinte no arquivo
+```custom.scss``` (nome de exemplo):
 
-1. Import the whole framework
+1. Importa o framework completo
 
 ```scss
 
 // Include any default variable overrides here (though functions won't be available)
 
-@import "@numaxlab/atomic/src/numaxlab-atomic";
+@import "@numaxlab/atomic/src/style";
 
 // Then add any customization or additional code here
 
 ```
 
-2. Import only the needed parts
+2. Importa só as partes necesarias
 
 ```scss
 
@@ -57,3 +61,5 @@ do either of these:
 // 6. Import your custom components or your project component extending the framework ones
 
 ```
+
+# Configuración

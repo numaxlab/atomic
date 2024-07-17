@@ -1,4 +1,3 @@
-.at-small,
-small {
-
+.at-small {
+    @include font-size($small-font-size);
 }

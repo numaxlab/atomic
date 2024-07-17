@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/button-group";
+
+.ml-button-group {
+    @extend .btn-group;
+
+    &.is-vertical {
+        @extend .btn-group-vertical;
+    }
+}

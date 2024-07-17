@@ -7,7 +7,6 @@ type BreadcrumbArgs = {
 
 const meta: Meta<BreadcrumbArgs> = {
   title: 'Molecules/Breadcrumb',
-  tags: ['autodocs'],
   render: (args) => {
     const breadcrumb = document.createElement('ol')
 
@@ -47,7 +46,7 @@ export default meta
 
 type Story = StoryObj<BreadcrumbArgs>;
 
-export const BreadcrumbStories: Story = {
+export const Single: Story = {
   args: {
     items: 2,
   },

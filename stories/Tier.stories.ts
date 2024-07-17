@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/html'
 
 type TierArgs = {
-  label: string;
+  header: string;
+  content: string;
 };
 
 const meta: Meta<TierArgs> = {
@@ -9,17 +10,32 @@ const meta: Meta<TierArgs> = {
   tags: ['autodocs'],
   render: (args) => {
     const tier = document.createElement('section')
-    tier.innerText = args.label
+    const header = document.createElement('header')
+    const h2 = document.createElement('h2')
+    const div = document.createElement('div')
+
+    div.className = 'tier-content'
+    h2.className = 'at-title'
+    header.className = 'tier-header'
+
+    h2.innerText = args.header
+    div.innerHTML = args.content
 
     tier.className = ['org-tier'].join(' ')
+
+    header.appendChild(h2)
+    tier.appendChild(header)
+    tier.appendChild(div)
 
     return tier
   },
   argTypes: {
-    label: { control: 'text' },
+    header: { control: 'text' },
+    content: { control: 'text' },
   },
   args: {
-    label: 'Tier',
+    header: 'Tier',
+    content: 'Content',
   },
 }
 
@@ -29,6 +45,7 @@ type Story = StoryObj<TierArgs>;
 
 export const TierStories: Story = {
   args: {
-    label: 'Tier',
+    header: 'Tier',
+    content: 'Content',
   },
 }

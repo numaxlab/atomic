@@ -16,8 +16,6 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
   ],
-  docs: {
-    autodocs: 'tag',
-  },
+  staticDirs: ['../dist'],
 }
 export default config

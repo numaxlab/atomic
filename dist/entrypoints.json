@@ -1,8 +1,18 @@
 {
   "entrypoints": {
-    "css/numaxlab-atomic": {
+    "css/style": {
       "css": [
-        "/css/numaxlab-atomic.css"
+        "/css/style.css"
+      ]
+    },
+    "css/fonts": {
+      "css": [
+        "/css/fonts.css"
+      ]
+    },
+    "css/icons": {
+      "css": [
+        "/css/icons.css"
       ]
     }
   }

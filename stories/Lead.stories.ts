@@ -6,7 +6,6 @@ type LeadArgs = {
 
 const meta: Meta<LeadArgs> = {
   title: 'Atoms/Lead',
-  tags: ['autodocs'],
   render: (args) => {
     const lead = document.createElement('div')
     lead.innerText = args.label
@@ -27,7 +26,7 @@ export default meta
 
 type Story = StoryObj<LeadArgs>;
 
-export const LeadStories: Story = {
+export const Single: Story = {
   args: {
     label: 'Nam sit amet neque imperdiet, tempor lacus at, posuere erat. Suspendisse tincidunt, est id rhoncus facilisis, velit tellus fringilla nisi, quis lacinia lorem tellus a neque',
   },

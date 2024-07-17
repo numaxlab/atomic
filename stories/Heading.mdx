@@ -1,0 +1,34 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks'
+import * as HeadingStories from './Heading.stories'
+
+<Meta of={HeadingStories}/>
+
+# Heading
+
+<Canvas of={HeadingStories.Heading1}/>
+<Controls/>
+
+## Variables Sass
+
+```scss
+$h1-font-size: 3rem;
+$h2-font-size: 2.25rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.375rem;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$font-sizes: (
+        1: $h1-font-size,
+        2: $h2-font-size,
+        3: $h3-font-size,
+        4: $h4-font-size,
+);
+
+$headings-margin-bottom: $spacer * .5;
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.2;
+$headings-color: inherit;
+```

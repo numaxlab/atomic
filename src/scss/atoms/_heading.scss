@@ -1,3 +1,9 @@
 .at-heading {
+    @extend %heading;
 
+    @each $size, $value in $font-sizes {
+        &.is-#{$size} {
+            @include font-size($value);
+        }
+    }
 }

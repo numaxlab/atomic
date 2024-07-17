@@ -33,8 +33,14 @@ export default meta
 
 type Story = StoryObj<ButtonArgs>;
 
-export const ButtonStories: Story = {
+export const Primary: Story = {
   args: {
     variant: 'is-primary',
+  },
+}
+
+export const Secondary: Story = {
+  args: {
+    variant: 'is-secondary',
   },
 }

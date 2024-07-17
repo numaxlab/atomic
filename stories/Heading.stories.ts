@@ -8,7 +8,6 @@ type HeadingArgs = {
 
 const meta: Meta<HeadingArgs> = {
   title: 'Atoms/Heading',
-  tags: ['autodocs'],
   render: (args) => {
     const heading = document.createElement(args.tag)
     heading.innerText = args.label

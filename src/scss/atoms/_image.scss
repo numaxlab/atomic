@@ -1,6 +1,6 @@
 .at-image {
 
     .image-caption {
-
+        @include font-size($small-font-size);
     }
 }

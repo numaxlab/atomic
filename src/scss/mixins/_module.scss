@@ -2,9 +2,14 @@
     &.is-xl {
         min-height: 20rem;
 
+        @include media-breakpoint-up(md) {
+            grid-column: auto / span 6;
+            grid-row: auto / span 2;
+        }
+
         @include media-breakpoint-up(lg) {
             min-height: 23.438rem;
-            grid-column: auto / span 8;
+            grid-column: auto / span 12;
             grid-row: auto / span 2;
         }
     }
@@ -25,7 +30,7 @@
         @include media-breakpoint-up(lg) {
             min-height: 22.5rem;
             grid-column: auto / span 4;
-            grid-row: auto / span 2;
+            grid-row: auto / span 1;
         }
     }
 
@@ -34,7 +39,7 @@
 
         @include media-breakpoint-up(md) {
             min-height: 11.25rem;
-            grid-column: auto / span 4;
+            grid-column: auto / span 3;
             grid-row: auto / span 1;
         }
     }

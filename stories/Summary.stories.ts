@@ -1,25 +1,74 @@
 import type { Meta, StoryObj } from '@storybook/html'
 
 type SummaryArgs = {
-  label: string;
+  hasMedia: boolean;
+  title: string;
+  text: string;
+  imageSrc: string;
 };
 
 const meta: Meta<SummaryArgs> = {
   title: 'Molecules/Summary',
   tags: ['autodocs'],
   render: (args) => {
-    const summary = document.createElement('article')
-    summary.innerText = args.label
+    const row = document.createElement('div')
+    const col = document.createElement('div')
 
+    const summary = document.createElement('article')
+    const title = document.createElement('h2')
+    const link = document.createElement('a')
+    const content = document.createElement('div')
+
+    title.className = 'at-title'
+    content.className = 'summary-content'
     summary.className = ['ml-summary'].join(' ')
 
-    return summary
+    link.href = '#'
+    link.innerText = args.title
+
+    content.innerHTML = args.text
+
+    if (args.hasMedia) {
+      const img = document.createElement('img')
+      const imgLink = document.createElement('a')
+
+      img.src = args.imageSrc
+      img.alt = ''
+
+      imgLink.className = 'summary-media-wrapper'
+      imgLink.href = '#'
+
+      imgLink.appendChild(img)
+
+      summary.appendChild(imgLink)
+    }
+
+    title.appendChild(link)
+    summary.appendChild(title)
+
+    if (args.text) {
+      summary.appendChild(content)
+    }
+
+    row.className = 'row'
+    col.className = 'col-md-4'
+
+    col.appendChild(summary)
+    row.appendChild(col)
+
+    return row
   },
   argTypes: {
-    label: { control: 'text' },
+    hasMedia: { control: 'boolean' },
+    title: { control: 'text' },
+    text: { control: 'text' },
+    imageSrc: { control: 'text' },
   },
   args: {
-    label: 'Summary',
+    hasMedia: false,
+    imageSrc: 'https://picsum.photos/720/521',
+    title: 'Lorem ipsum dolor sit amet',
+    text: '<p>Vestibulum turpis magna, pharetra vitae sapien non, rhoncus hendrerit nulla. Nulla diam lacus, tincidunt nec ultrices et, congue eu dolor.</p>',
   },
 }
 
@@ -27,8 +76,4 @@ export default meta
 
 type Story = StoryObj<SummaryArgs>;
 
-export const SummaryStories: Story = {
-  args: {
-    label: 'Summary',
-  },
-}
+export const SummaryStories: Story = {}

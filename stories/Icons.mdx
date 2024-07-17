@@ -1,0 +1,155 @@
+import { IconGallery, IconItem, Meta } from '@storybook/blocks'
+
+<Meta title="Atoms/Iconas"/>
+
+# Iconas
+
+Este framework inclúe a versión gratuíta da biblioteca de iconas de Font Awesome. Podes consultar a lista completa na
+súa [páxina oficial](https://fontawesome.com/search?o=r&m=free).
+
+Algúns exemplos de iconas:
+
+## Solid
+
+<IconGallery>
+  <IconItem name="fa-user">
+    <i class="fa-solid fa-user"></i>
+  </IconItem>
+  <IconItem name="fa-house">
+    <i class="fa-solid fa-house"></i>
+  </IconItem>
+  <IconItem name="fa-heart">
+    <i class="fa-solid fa-heart"></i>
+  </IconItem>
+  <IconItem name="fa-envelope">
+    <i class="fa-solid fa-envelope"></i>
+  </IconItem>
+  <IconItem name="fa-arrow-right">
+    <i class="fa-solid fa-arrow-right"></i>
+  </IconItem>
+</IconGallery>
+
+Consulta todas as [iconas solid](https://fontawesome.com/search?o=r&m=free&s=solid).
+
+## Regular
+
+<IconGallery>
+  <IconItem name="fa-user">
+    <i class="fa-regular fa-user"></i>
+  </IconItem>
+  <IconItem name="fa-heart">
+    <i class="fa-regular fa-heart"></i>
+  </IconItem>
+  <IconItem name="fa-envelope">
+    <i class="fa-regular fa-envelope"></i>
+  </IconItem>
+  <IconItem name="fa-comment">
+    <i class="fa-regular fa-comment"></i>
+  </IconItem>
+  <IconItem name="fa-circle-down">
+    <i class="fa-regular fa-circle-down"></i>
+  </IconItem>
+</IconGallery>
+
+Consulta todas as [iconas regular](https://fontawesome.com/search?o=r&m=free&s=regular).
+
+## Brands
+
+<IconGallery>
+  <IconItem name="fa-figma">
+    <i class="fa-brands fa-figma"></i>
+  </IconItem>
+  <IconItem name="fa-instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </IconItem>
+  <IconItem name="fa-telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </IconItem>
+  <IconItem name="fa-youtube">
+    <i class="fa-brands fa-youtube"></i>
+  </IconItem>
+  <IconItem name="fa-dropbox">
+    <i class="fa-brands fa-dropbox"></i>
+  </IconItem>
+</IconGallery>
+
+Consulta todas as [iconas brands](https://fontawesome.com/search?o=r&m=free&f=brands).
+
+## Uso en Sass
+
+Para usar iconas no teu Sass, emprega o placeholder `%fa-icon` (ou o mixin `fa-icon`) para configurar o elemento como icona. Logo emprega o
+placeholder correspondente ao estilo de icona que precisas (`.fas`, `.far` ou `.fab`). Para rematar usa a función
+`fa-content` e o nome da variable coa icona que precises.
+
+```scss
+  .at-user-icon {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &::before {
+      content: fa-content($fa-var-user);
+    }
+  }
+
+  .at-twitter-icon {
+    @include fa-icon;
+    @extend .fab;
+
+    &::before {
+      content: fa-content($fa-var-twitter);
+    }
+  }
+```
+
+## Variables Sass
+
+```scss
+$fa-css-prefix          : fa;
+$fa-style               : 900;
+$fa-style-family        : "Font Awesome 6 Free";
+
+$fa-display             : inline-block;
+
+$fa-fw-width            : fa-divide(20em, 16);
+$fa-inverse             : #fff;
+
+$fa-border-color        : #eee;
+$fa-border-padding      : .2em .25em .15em;
+$fa-border-radius       : .1em;
+$fa-border-style        : solid;
+$fa-border-width        : .08em;
+
+$fa-size-scale-2xs      : 10;
+$fa-size-scale-xs       : 12;
+$fa-size-scale-sm       : 14;
+$fa-size-scale-base     : 16;
+$fa-size-scale-lg       : 20;
+$fa-size-scale-xl       : 24;
+$fa-size-scale-2xl      : 32;
+
+$fa-sizes: (
+  "2xs"                 : $fa-size-scale-2xs,
+  "xs"                  : $fa-size-scale-xs,
+  "sm"                  : $fa-size-scale-sm,
+  "lg"                  : $fa-size-scale-lg,
+  "xl"                  : $fa-size-scale-xl,
+  "2xl"                 : $fa-size-scale-2xl
+);
+
+$fa-li-width            : 2em;
+$fa-li-margin           : $fa-li-width * fa-divide(5, 4);
+
+$fa-pull-margin         : .3em;
+
+$fa-primary-opacity     : 1;
+$fa-secondary-opacity   : .4;
+
+$fa-stack-vertical-align: middle;
+$fa-stack-width         : ($fa-fw-width * 2);
+$fa-stack-z-index       : auto;
+
+$fa-font-display        : block;
+$fa-font-path           : "../webfonts";
+```
+
+Consulta o uso de cada variable na [documentación oficial](https://docs.fontawesome.com/web/use-with/scss/#simplify-and-customize-with-variables).

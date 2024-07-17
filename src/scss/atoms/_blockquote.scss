@@ -2,4 +2,20 @@ blockquote,
 .at-blockquote {
     border-inline-start: map-get($border-widths, 2) solid $border-color;
     padding-inline-start: 1rem;
+    margin-bottom: $blockquote-margin-y;
+    @include font-size($blockquote-font-size);
+
+    &.has-footer {
+        .blockquote {
+            border-inline-start: none;
+            padding-inline-start: 0;
+        }
+
+        .blockquote-footer {
+            margin-top: -$blockquote-margin-y;
+            margin-bottom: $blockquote-margin-y;
+            @include font-size($blockquote-footer-font-size);
+            color: $blockquote-footer-color;
+        }
+    }
 }

@@ -12,8 +12,8 @@ type BannerArgs = {
 
 const meta: Meta<BannerArgs> = {
   title: 'Molecules/Banner',
-  tags: ['autodocs'],
   render: (args) => {
+    const modulesContainer = document.createElement('div')
     const banner = document.createElement('article')
     const a = document.createElement('a')
     const backgroundOverlay = document.createElement('div')
@@ -25,8 +25,7 @@ const meta: Meta<BannerArgs> = {
     text.className = 'banner-text'
     title.className = 'at-title'
     content.className = 'banner-content'
-    contentWrapper.className = 'banner-content-wrapper'
-    a.className = 'banner-link'
+    a.className = 'banner-inner-wrapper'
     a.setAttribute('href', '#')
 
     title.innerHTML = args.title
@@ -34,7 +33,6 @@ const meta: Meta<BannerArgs> = {
 
     content.appendChild(title)
     content.appendChild(text)
-    contentWrapper.appendChild(content)
 
     let cssClass = ['ml-banner', args.size, args.variant]
 
@@ -46,12 +44,15 @@ const meta: Meta<BannerArgs> = {
       a.appendChild(backgroundOverlay)
     }
 
-    a.appendChild(contentWrapper)
+    a.appendChild(content)
 
     banner.appendChild(a)
     banner.className = cssClass.join(' ')
 
-    return banner
+    modulesContainer.className = 'org-modules-container'
+    modulesContainer.appendChild(banner)
+
+    return modulesContainer
   },
   argTypes: {
     size: {
@@ -81,4 +82,4 @@ export default meta
 
 type Story = StoryObj<BannerArgs>;
 
-export const BannerStories: Story = {}
+export const Primary: Story = {}

@@ -1,4 +1,4 @@
-import '../dist/css/numaxlab-atomic.css'
+import '../dist/css/style.css'
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {
@@ -19,9 +19,16 @@ const preview = {
           'Atoms',
           'Molecules',
           'Organisms',
-          'Templates'],
+          'Templates',
+        ],
       },
     },
+    docs: {
+      source: {
+        format: 'html',
+      },
+    },
+    tags: ['autodocs'],
   },
 }
 

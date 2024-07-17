@@ -19,6 +19,8 @@ Encore
   .enablePostCssLoader()
 
   // add entry points
-  .addStyleEntry('css/numaxlab-atomic', './src/scss/numaxlab-atomic.scss')
+  .addStyleEntry('css/style', './src/scss/style.scss').
+  addStyleEntry('css/fonts', './src/scss/fonts.scss').
+  addStyleEntry('css/icons', './src/scss/icons.scss')
 
 module.exports = Encore.getWebpackConfig()

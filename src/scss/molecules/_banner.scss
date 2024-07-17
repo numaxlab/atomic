@@ -6,23 +6,71 @@ $banner-padding: 1.875rem;
     @include module;
 
     position: relative;
-    margin-left: -(math.div($grid-gutter-width, 2));
-    margin-right: -(math.div($grid-gutter-width, 2));
+    background-color: $gray;
     overflow: hidden;
     display: flex;
     align-items: stretch;
 
-    .banner-link {
+    .banner-inner-wrapper {
         position: relative;
         display: block;
         width: 100%;
         text-decoration: none;
     }
 
-    .banner-content-wrapper {
+    .banner-background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .banner-content {
         position: relative;
         width: 100%;
         padding: $banner-padding;
         z-index: 3;
+    }
+
+    .at-title {
+        margin-bottom: $spacer;
+    }
+
+    .banner-text {
+        @include font-size($small-font-size);
+    }
+
+    &.is-xl {
+        .at-title {
+            @include font-size($h1-font-size);
+        }
+
+        @include media-breakpoint-up(lg) {
+            .banner-content {
+                padding-right: 30%;
+            }
+        }
+    }
+
+    &.is-l {
+        .at-title {
+            @include font-size($h2-font-size);
+        }
+    }
+
+    &.is-m {
+        .at-title {
+            @include font-size($h3-font-size);
+        }
+    }
+
+    &.is-s {
+        .at-title {
+            @include font-size($h4-font-size);
+        }
     }
 }
