@@ -5,6 +5,9 @@ on:
         branches:
             - 'master'
 
+env:
+    PUBLIC_PATH: /atomic/
+
 permissions:
     contents: read
     pages: write
@@ -23,6 +26,7 @@ jobs:
             -   uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
                 with:
                     install_command: npm install
+                    compile_command: npm run build
                     build_command: npm run build-storybook
                     path: storybook-static
                     checkout: false
