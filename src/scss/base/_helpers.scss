@@ -1,5 +1,5 @@
-@import "~bootstrap/scss/helpers/ratio";
-@import "~bootstrap/scss/utilities";
+@import "bootstrap/scss/helpers/ratio";
+@import "bootstrap/scss/utilities";
 
 .is-sr-only {
     @include visually-hidden();
@@ -175,4 +175,4 @@ $utilities: map-merge(
                 )
 );
 
-@import "~bootstrap/scss/utilities/api";
+@import "bootstrap/scss/utilities/api";

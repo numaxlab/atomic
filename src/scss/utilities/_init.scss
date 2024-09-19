@@ -2,12 +2,12 @@
 @import "variables/main";
 
 // Bootstrap variables
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/variables-dark";
-@import "~bootstrap/scss/maps";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
 
 // Bootstrap mixins and utilities
-@import "~bootstrap/scss/mixins";
+@import "bootstrap/scss/mixins";
 
 // Project mixins
 @import "../mixins/generic";
