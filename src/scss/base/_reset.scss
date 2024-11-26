@@ -9,10 +9,22 @@ body {
     font-kerning: normal;
 }
 
+@each $size, $map in $headings {
+    h#{$size} {
+        font-weight: map-get($map, font-weight);
+        line-height: map-get($map, line-height);
+        letter-spacing: map-get($map, letter-spacing);
+    }
+}
+
 img {
     @include img-fluid;
 }
 
 ul {
     list-style-type: disc;
+}
+
+[x-cloak] {
+    display: none !important;
 }

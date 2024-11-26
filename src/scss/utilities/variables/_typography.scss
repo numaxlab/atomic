@@ -34,6 +34,8 @@ $font-sizes: (
         2: $h2-font-size,
         3: $h3-font-size,
         4: $h4-font-size,
+        5: $h5-font-size,
+        6: $h6-font-size,
 ) !default;
 
 $headings-margin-bottom: $spacer * .5 !default;
@@ -43,10 +45,51 @@ $headings-font-weight: $font-weight-bold !default;
 $headings-line-height: 1.2 !default;
 $headings-color: inherit !default;
 
+$headings: (
+        1: (
+                font-size: $h1-font-size,
+                font-weight: $headings-font-weight,
+                line-height: $line-height-lg,
+                letter-spacing: 0
+        ),
+        2: (
+                font-size: $h2-font-size,
+                font-weight: $headings-font-weight,
+                line-height: $line-height-lg,
+                letter-spacing: 0
+        ),
+        3: (
+                font-size: $h3-font-size,
+                font-weight: $headings-font-weight,
+                line-height: $line-height-base,
+                letter-spacing: 0
+        ),
+        4: (
+                font-size: $h4-font-size,
+                font-weight: $headings-font-weight,
+                line-height: $line-height-base,
+                letter-spacing: 0
+        ),
+        5: (
+                font-size: $h5-font-size,
+                font-weight: $headings-font-weight,
+                line-height: $line-height-base,
+                letter-spacing: 0
+        ),
+        6: (
+                font-size: $h6-font-size,
+                font-weight: $headings-font-weight,
+                line-height: $line-height-base,
+                letter-spacing: 0
+        ),
+) !default;
+
 $lead-font-size: 1.375rem !default;
+$lead-line-height: 1.2 !default;
 $lead-font-weight: $font-weight-normal !default;
 
 $small-font-size: .875rem !default;
+$small-line-height: 1.2 !default;
 
 $blockquote-margin-y: $spacer !default;
 $blockquote-font-size: 1.375rem !default;

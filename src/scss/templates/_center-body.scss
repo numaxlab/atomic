@@ -1,0 +1,16 @@
+.tpl-centered-body {
+    --max-width: 500px;
+    --margin-inline: 2rem;
+    --margin-block: 2rem;
+
+    .centered-body-wrapper {
+        box-sizing: border-box;
+        min-height: calc(100lvh - var(--margin-block) * 2);
+        margin-block: var(--margin-block);
+        margin-inline: var(--margin-inline);
+        display: grid;
+        grid-template-columns: minmax(0, var(--max-width));
+        justify-content: center;
+        align-content: center;
+    }
+}

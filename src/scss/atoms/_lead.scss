@@ -1,4 +1,5 @@
 .at-lead {
     @include font-size($lead-font-size);
+    line-height: $lead-line-height;
     font-weight: $lead-font-weight;
 }

@@ -3,7 +3,7 @@
 $banner-padding: 1.875rem;
 
 .ml-banner {
-    @include module;
+    @include wall-brick;
 
     position: relative;
     background-color: $gray;
@@ -32,11 +32,12 @@ $banner-padding: 1.875rem;
     .banner-content {
         position: relative;
         width: 100%;
+        height: 100%;
         padding: $banner-padding;
         z-index: 3;
     }
 
-    .at-title {
+    .at-heading {
         margin-bottom: $spacer;
     }
 
@@ -45,7 +46,7 @@ $banner-padding: 1.875rem;
     }
 
     &.is-xl {
-        .at-title {
+        .at-heading {
             @include font-size($h1-font-size);
         }
 
@@ -57,19 +58,19 @@ $banner-padding: 1.875rem;
     }
 
     &.is-l {
-        .at-title {
+        .at-heading {
             @include font-size($h2-font-size);
         }
     }
 
     &.is-m {
-        .at-title {
+        .at-heading {
             @include font-size($h3-font-size);
         }
     }
 
     &.is-s {
-        .at-title {
+        .at-heading {
             @include font-size($h4-font-size);
         }
     }

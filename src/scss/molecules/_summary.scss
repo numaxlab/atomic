@@ -6,7 +6,7 @@
         margin-bottom: map-get($spacers, 1);
     }
 
-    .at-title {
+    .at-heading {
         @include font-size($h4-font-size);
         margin-bottom: map-get($spacers, 1);
     }
