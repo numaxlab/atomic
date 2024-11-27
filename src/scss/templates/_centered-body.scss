@@ -1,7 +1,7 @@
 .tpl-centered-body {
-    --max-width: 500px;
-    --margin-inline: 2rem;
-    --margin-block: 2rem;
+    --max-width: #{map-get($container-max-widths, lg)};
+    --margin-inline: #{$container-padding-x};
+    --margin-block: #{$container-padding-x};
 
     .centered-body-wrapper {
         box-sizing: border-box;

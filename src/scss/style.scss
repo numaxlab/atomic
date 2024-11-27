@@ -8,9 +8,9 @@
 @import "base/all";
 
 // Atoms
+@import "atoms/blockquote";
 @import "atoms/heading";
 @import "atoms/lead";
-@import "atoms/blockquote";
 @import "atoms/small";
 @import "atoms/button";
 @import "atoms/image";
@@ -37,5 +37,5 @@
 @import "organisms/wall";
 
 // Templates
-@import "templates/center-body";
+@import "templates/centered-body";
 @import "templates/grid";

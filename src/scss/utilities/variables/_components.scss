@@ -22,4 +22,6 @@ $aspect-ratios: (
         "21x9": calc(9 / 21 * 100%)
 ) !default;
 
+$banner-padding: map-get($spacers, 2) !default;
+
 $wall-gap: $grid-gutter-width !default;
