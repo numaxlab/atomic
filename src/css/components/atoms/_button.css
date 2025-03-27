@@ -1,0 +1,29 @@
+@layer components {
+    .at-button {
+        @apply py-2 px-4 border-1 border-black;
+
+        &.is-primary {
+            @apply bg-primary border-primary text-white;
+        }
+
+        &.is-secondary {
+            @apply bg-secondary border-secondary text-black;
+        }
+
+        &.is-success {
+            @apply bg-success border-success text-white;
+        }
+
+        &.is-warning {
+            @apply bg-warning border-warning text-black;
+        }
+
+        &.is-danger {
+            @apply bg-danger border-danger text-white;
+        }
+
+        @variant disabled {
+            @apply bg-secondary-light border-secondary-light text-black;
+        }
+    }
+}

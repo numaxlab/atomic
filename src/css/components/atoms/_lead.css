@@ -1,0 +1,5 @@
+@layer components {
+    .at-lead {
+        @apply text-xl;
+    }
+}

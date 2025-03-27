@@ -1,0 +1,25 @@
+@layer components {
+    .at-tag {
+        @apply border-1 py-1 px-2;
+
+        &.is-primary {
+            @apply border-primary text-primary;
+        }
+
+        &.is-secondary {
+            @apply border-secondary text-secondary;
+        }
+
+        &.is-success {
+            @apply border-success text-success;
+        }
+
+        &.is-warning {
+            @apply border-warning text-warning;
+        }
+
+        &.is-danger {
+            @apply border-danger text-danger;
+        }
+    }
+}

@@ -4,118 +4,51 @@ import { ColorItem, ColorPalette, Meta } from '@storybook/blocks'
 
 # Sistema de cores
 
+Dispoñemos da [paleta de cores de Tailwind CSS](https://tailwindcss.com/docs/colors). E a maiores, o tema de Atomic dispón das seguintes cores:
+
 <ColorPalette>
-  <ColorItem
-    title="Grises"
-    subtitle=""
-    colors={{
-      'gray-400': '#E5E5E5',
-      'gray-600': '#9D9D9D'
-    }}
-  />
-  <ColorItem
-    title="Cores básicas"
-    subtitle=""
-    colors={{
-      white: '#FFFFFF',
-      gray: '#E5E5E5',
-      black: '#000000',
-      green: '#487629',
-      yellow: '#FFC107',
-      red: '#FF0000'
-    }}
-  />
   <ColorItem
     title="Primaria"
     subtitle=""
-    colors={{ primary: '#0000FF' }}
+    colors={{ primary: 'oklch(0.452 0.3132 264.04)' }}
   />
   <ColorItem
     title="Secundaria"
     subtitle=""
-    colors={{ gray: '#E5E5E5' }}
+    colors={{ secondary: 'oklch(0.696 0 0)' }}
   />
+  <ColorItem
+      title="Secundaria clara"
+      subtitle=""
+      colors={{ 'secondary-light': 'oklch(0.9219 0 0)' }}
+    />
   <ColorItem
     title="Éxito"
     subtitle=""
-    colors={{ green: '#487629' }}
+    colors={{ success: 'oklch(0.532 0.157 131.589)' }}
   />
   <ColorItem
     title="Alerta"
     subtitle=""
-    colors={{ warning: '#FFC107' }}
+    colors={{ warning: 'oklch(0.795 0.184 86.047)' }}
   />
   <ColorItem
     title="Erro"
     subtitle=""
-    colors={{ danger: '#FF0000' }}
-  />
-  <ColorItem
-    title="Tema"
-    subtitle=""
-    colors={{
-      primary: '#0000FF',
-      secondary: '#E5E5E5',
-      success: '#487629',
-      warning: '#FFC107',
-      danger: '#FF0000',
-    }}
+    colors={{ error: 'oklch(0.577 0.245 27.325)' }}
   />
 </ColorPalette>
 
-## Variables Sass
+## Variables CSS
 
-```scss
-$white: #FFFFFF;
-$gray-400: #E5E5E5;
-$gray-600: #9D9D9D;
-$gray: $gray-400;
-$black: #000000;
-$green: #487629;
-$yellow: #FFC107;
-$yellow-100: tint-color($yellow, 80%);
-$red: #FF0000;
+```css
+--color-black: #000;
+--color-white: #fff;
 
-$grays: (
-        "400": $gray-400,
-        "600": $gray-600,
-);
-
-$colors: (
-        "red": $red,
-        "yellow": $yellow,
-        "green": $green,
-        "black": $black,
-        "white": $white,
-        "gray": $gray,
-);
-
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio: 4.5;
-
-$primary: #0000FF;
-$secondary: $gray-600;
-$success: $green;
-$warning: $yellow;
-$danger: $red;
-
-$theme-colors: (
-        "primary": $primary,
-        "secondary": $secondary,
-        "success": $success,
-        "warning": $warning,
-        "danger": $danger,
-);
-
-$theme-colors-text: $theme-colors;
-
-$theme-colors-bg-subtle: (
-        "primary": tint-color($primary, 90%),
-        "secondary": $white,
-        "success": tint-color($success, 90%),
-        "warning": tint-color($warning, 90%),
-        "danger": tint-color($danger, 90%),
-);
-
-$theme-colors-border-subtle: $theme-colors;
+--color-primary: oklch(0.452 0.3132 264.04);
+--color-secondary: oklch(0.696 0 0);
+--color-secondary-light: oklch(0.9219 0 0);
+--color-success: var(--color-green-700);
+--color-warning: var(--color-yellow-500);
+--color-error: var(--color-error);
 ```

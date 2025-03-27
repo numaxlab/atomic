@@ -1,0 +1,9 @@
+@layer components {
+    .at-blockquote {
+        @apply border-s-2 border-secondary-light pl-2 text-base;
+
+        .blockquote-footer {
+            @apply text-sm text-secondary;
+        }
+    }
+}

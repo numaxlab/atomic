@@ -1,0 +1,5 @@
+@layer components {
+    .at-small {
+        @apply text-sm;
+    }
+}

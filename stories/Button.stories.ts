@@ -1,32 +1,37 @@
-import type { Meta, StoryObj } from '@storybook/html'
+import type {Meta, StoryObj} from '@storybook/html'
 import variants from './variants'
 
 type ButtonArgs = {
-  variant: string;
-  label: string;
+    variant: string;
+    label: string;
+    disabled: boolean;
 }
 
 const meta: Meta<ButtonArgs> = {
-  title: 'Atoms/Button',
-  render: (args) => {
-    const btn = document.createElement('button')
-    btn.type = 'button'
-    btn.innerText = args.label
+    title: 'Atoms/Button',
+    render: (args) => {
+        const btn = document.createElement('button')
+        btn.type = 'button'
+        btn.innerText = args.label
 
-    btn.className = ['at-button', args.variant].join(' ')
+        btn.className = ['at-button', args.variant].join(' ')
 
-    return btn
-  },
-  argTypes: {
-    label: { control: 'text' },
-    variant: {
-      control: { type: 'select' },
-      options: variants,
+        btn.disabled = args.disabled
+
+        return btn
     },
-  },
-  args: {
-    label: 'Button',
-  },
+    argTypes: {
+        label: {control: 'text'},
+        variant: {
+            control: {type: 'select'},
+            options: variants,
+        },
+        disabled: {control: 'boolean'},
+    },
+    args: {
+        label: 'Botón',
+        disabled: false
+    },
 }
 
 export default meta
@@ -34,13 +39,13 @@ export default meta
 type Story = StoryObj<ButtonArgs>;
 
 export const Primary: Story = {
-  args: {
-    variant: 'is-primary',
-  },
+    args: {
+        variant: 'is-primary',
+    },
 }
 
 export const Secondary: Story = {
-  args: {
-    variant: 'is-secondary',
-  },
+    args: {
+        variant: 'is-secondary',
+    },
 }

@@ -13,11 +13,10 @@ type BannerArgs = {
 const meta: Meta<BannerArgs> = {
     title: 'Molecules/Banner',
     render: (args) => {
-        const wall = document.createElement('div')
+        const grid = document.createElement('div')
         const banner = document.createElement('article')
         const a = document.createElement('a')
         const backgroundOverlay = document.createElement('div')
-        const contentWrapper = document.createElement('div')
         const content = document.createElement('div')
         const heading = document.createElement('h2')
         const text = document.createElement('div')
@@ -49,15 +48,15 @@ const meta: Meta<BannerArgs> = {
         banner.appendChild(a)
         banner.className = cssClass.join(' ')
 
-        wall.className = 'org-wall'
-        wall.appendChild(banner)
+        grid.className = 'grid md:grid-cols-6'
+        grid.appendChild(banner)
 
-        return wall
+        return grid
     },
     argTypes: {
         size: {
             control: {type: 'select'},
-            options: ['is-s', 'is-m', 'is-l', 'is-xl'],
+            options: ['col-span-2', 'col-span-3', 'col-span-4 row-span-2', 'col-span-6'],
         },
         variant: {
             control: {type: 'select'},
@@ -69,7 +68,7 @@ const meta: Meta<BannerArgs> = {
         text: {control: 'text'},
     },
     args: {
-        size: 'is-m',
+        size: 'col-span-2',
         variant: 'is-primary',
         hasMedia: true,
         imageSrc: 'https://picsum.photos/720/521',

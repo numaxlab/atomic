@@ -1,0 +1,25 @@
+@layer components {
+    .ml-alert {
+        @apply border-1 p-4;
+
+        &.is-primary {
+            @apply text-primary border-primary;
+        }
+
+        &.is-secondary {
+            @apply text-secondary border-secondary;
+        }
+
+        &.is-success {
+            @apply text-success border-success;
+        }
+
+        &.is-warning {
+            @apply text-warning border-warning;
+        }
+
+        &.is-danger {
+            @apply text-danger border-danger;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@layer components {
+    .at-form-control {
+        @apply appearance-none block h-10 w-full border-1 border-secondary-light px-2 py-1;
+
+        @variant focus {
+            @apply shadow-md outline-2 outline-primary;
+        }
+
+        @variant focus-visible {
+            @apply shadow-md outline-2 outline-primary;
+        }
+
+        &::placeholder {
+            @apply text-secondary;
+        }
+
+        &.is-color {
+            @apply h-10 w-10 p-2;
+        }
+
+        &.is-textarea {
+            @apply h-auto;
+        }
+
+        &.is-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+            background-size: calc(var(--spacing) * 4);
+            background-position: right calc(var(--spacing) * 2) center;
+            @apply appearance-none bg-no-repeat pr-8;
+        }
+
+        &[disabled],
+        &[readonly] {
+            @apply bg-secondary-light border-secondary-light;
+        }
+
+        &[type="checkbox"],
+        &[type="radio"] {
+            @apply inline-block p-0 align-middle h-4 w-4 mr-1 bg-origin-border select-none;
+            print-color-adjust: exact;
+        }
+
+        &[type="radio"] {
+            @apply rounded-full;
+        }
+
+        &[type="checkbox"]:checked,
+        &[type="radio"]:checked {
+            @apply bg-primary bg-center bg-no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &.is-plaintext {
+            @apply bg-transparent border-none;
+        }
+
+        &.is-invalid {
+            @apply border-danger;
+        }
+
+        &.is-valid {
+            @apply border-success;
+        }
+    }
+}

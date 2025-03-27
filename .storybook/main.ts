@@ -1,21 +1,20 @@
-import type { StorybookConfig } from '@storybook/html-webpack5'
+import type {StorybookConfig} from "@storybook/html-vite";
 
-/** @type { import('@storybook/html-webpack5').StorybookConfig } */
 const config: StorybookConfig = {
-  framework: {
-    name: '@storybook/html-webpack5',
-    options: {},
-  },
-  stories: [
-    '../stories/**/*.mdx',
-    '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: [
-    '@storybook/addon-webpack5-compiler-swc',
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
-    '@storybook/addon-interactions',
-  ],
-  staticDirs: ['../dist'],
+    framework: "@storybook/html-vite",
+    stories: [
+        '../stories/**/*.mdx',
+        '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+    addons: [
+        '@storybook/addon-links',
+        '@storybook/addon-essentials',
+        '@chromatic-com/storybook',
+        '@storybook/addon-interactions',
+    ],
+    core: {
+        builder: '@storybook/builder-vite',
+    },
+    staticDirs: ['../dist'],
 }
+
 export default config

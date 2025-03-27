@@ -10,51 +10,8 @@ revisa a documentación dos átomos de Blockquote, Heading, Lead, Small e Descri
 
 <Canvas of={TypographyStories.Single}/>
 
-## Variables Sass
+## Variables CSS
 
-```scss
-$enable-rfs: true;
-
-$rfs-base-value: 1.25rem;
-$rfs-unit: rem;
-$rfs-breakpoint: 1200px;
-$rfs-breakpoint-unit: px;
-$rfs-two-dimensional: false;
-$rfs-factor: 10;
-$rfs-mode: min-media-query;
-// Generate enable or disable classes. Possibilities: false, "enable" or "disable"
-$rfs-class: false;
-// 1 rem = $rfs-rem-value px
-$rfs-rem-value: 16;
-// Safari iframe resize bug: https://github.com/twbs/rfs/issues/14
-$rfs-safari-iframe-resize-bug-fix: false;
-
-$font-family-sans-serif: 'Roboto', sans-serif;
-$font-family-sans-serif: serif;
-$font-family-monospace: monospace;
-$font-family-base: var(--#{$prefix}font-sans-serif);
-
-$font-size-root: null;
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-sm: $font-size-base * .875;
-$font-size-lg: $font-size-base * 1.25;
-
-$font-weight-lighter: lighter;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
-$font-weight-bolder: bolder;
-
-$font-weight-base: $font-weight-normal;
-
-$line-height-base: 1.5;
-$line-height-sm: 1.25;
-$line-height-lg: 2;
+```css
+--font-sans: "Roboto", sans-serif;
 ```
-
-## Mixins
-
-Para que a tipografía sexa responsive usamos [Responsive Font Size (RFS)](https://getbootstrap.com/docs/5.3/getting-started/rfs/)
-para definir todos os corpos de letra.

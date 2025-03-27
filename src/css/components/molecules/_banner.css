@@ -1,0 +1,17 @@
+@layer components {
+    .ml-banner {
+        @apply relative bg-secondary overflow-hidden flex items-stretch min-h-75;
+
+        .banner-inner-wrapper {
+            @apply relative block w-full;
+        }
+
+        .banner-content {
+            @apply relative z-1 w-full h-full p-5;
+        }
+
+        &.has-media .banner-background-overlay {
+            @apply absolute inset-0 bg-no-repeat bg-cover bg-center;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@theme {
+    --color-black: #000;
+    --color-white: #fff;
+
+    --color-primary: oklch(0.452 0.3132 264.04);
+    --color-secondary: oklch(0.696 0 0);
+    --color-secondary-light: oklch(0.9219 0 0);
+    --color-success: var(--color-green-700);
+    --color-warning: var(--color-yellow-500);
+    --color-danger: var(--color-red-600);
+
+    --font-sans: "Roboto", sans-serif;
+}

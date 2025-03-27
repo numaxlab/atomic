@@ -1,0 +1,21 @@
+@layer components {
+    .at-heading {
+        @apply font-bold text-lg;
+
+        &.is-1 {
+            @apply text-5xl;
+        }
+
+        &.is-2 {
+            @apply text-4xl;
+        }
+
+        &.is-3 {
+            @apply text-3xl;
+        }
+
+        &.is-4 {
+            @apply text-2xl;
+        }
+    }
+}

@@ -1,33 +1,33 @@
-import type { Meta, StoryObj } from '@storybook/html'
+import type {Meta, StoryObj} from '@storybook/html'
 
 type TypographyArgs = {};
 
 const meta: Meta<TypographyArgs> = {
-  title: 'Base/Tipografía',
-  render: () => {
-    const div = document.createElement('div')
-    div.innerHTML =
-      '<p>This line of text is rendered as a regular paragraph.</p>' +
-      '<p>You can use the mark tag to <mark>highlight</mark> text.</p>' +
-      '<p><del>This line of text is meant to be treated as deleted text.</del></p>' +
-      '<p><s>This line of text is meant to be treated as no longer accurate.</s></p>' +
-      '<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>' +
-      '<p><u>This line of text will render as underlined.</u></p>' +
-      '<p><small>This line of text is meant to be treated as fine print.</small></p>' +
-      '<p><strong>This line rendered as bold text.</strong></p>' +
-      '<p><em>This line rendered as italicized text.</em></p>' +
-      '<p>You can use the abbr tag to abbreviations and acronyms: <abbr title="attribute">attr</abbr>.</p>' +
-      '<hr>' +
-      '<ul>\n' +
-      '  <li>This is a list.</li>\n' +
-      '  <li>Second element.</li>\n' +
-      '  <li>Third element.</li>\n' +
-      '</ul>'
+    title: 'Base/Tipografía',
+    render: () => {
+        const div = document.createElement('div')
+        div.innerHTML =
+            '<p>Esta liña é un parágrafo normal.</p>' +
+            '<p>Podes empregar a etiqueta <code>mark</code> para <mark>destacar</mark> texto.</p>' +
+            '<p><del>Esta liña é tratada coma un texto eliminado.</del></p>' +
+            '<p><s>Esta liña é tratada coma un texto que xa non é certeiro ou riguroso.</s></p>' +
+            '<p><ins>Esta liña é tratada coma un texto engadido ao documento.</ins></p>' +
+            '<p><u>Esta liña está subliñada.</u></p>' +
+            '<p><small>Esta liña é tratada como un texto como letra pequena.</small></p>' +
+            '<p><strong>Esta liña é tratada coma un texto que ten importancia (e vese en negriña).</strong></p>' +
+            '<p><em>Esta liña é tratada coma un texto con énfase (e vese en cursiva).</em></p>' +
+            '<p>Podes empregar a ediqueta <code>abbr</code> para abreviaturas e acrónimos: <abbr title="Mozilla Developer Network">MDN</abbr>.</p>' +
+            '<hr>' +
+            '<ul class="list-disc pl-4">\n' +
+            '  <li>Isto é unha lista.</li>\n' +
+            '  <li>Segundo elemento.</li>\n' +
+            '  <li>Terceiro elemento.</li>\n' +
+            '</ul>'
 
-    return div
-  },
-  argTypes: {},
-  args: {},
+        return div
+    },
+    argTypes: {},
+    args: {},
 }
 
 export default meta
@@ -35,5 +35,5 @@ export default meta
 type Story = StoryObj<TypographyArgs>;
 
 export const Single: Story = {
-  args: {},
+    args: {},
 }

@@ -50,8 +50,8 @@ const meta: Meta<SummaryArgs> = {
             summary.appendChild(content)
         }
 
-        row.className = 'row'
-        col.className = 'col-md-4'
+        row.className = 'flex'
+        col.className = 'w-1/3'
 
         col.appendChild(summary)
         row.appendChild(col)

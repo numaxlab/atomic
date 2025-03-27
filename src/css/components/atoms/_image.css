@@ -1,0 +1,7 @@
+@layer components {
+    .at-image {
+        .image-caption {
+            @apply text-sm;
+        }
+    }
+}
