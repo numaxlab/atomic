@@ -1,8 +1,8 @@
 {
     "name": "@numaxlab/atomic",
     "type": "module",
-    "version": "1.0.0-beta.1",
-    "description": "Atomic is a CSS and SCSS framework based in Bootstrap",
+    "version": "1.0.0-beta.2",
+    "description": "Atomic is a CSS framework based in Tailwind CSS",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/numaxlab/atomic.git"
@@ -17,7 +17,8 @@
         "build:storybook": "storybook build"
     },
     "files": [
-        "dist"
+        "dist",
+        "src"
     ],
     "./src/css/atomic.css": "./dist/atomic.css",
     "dependencies": {
