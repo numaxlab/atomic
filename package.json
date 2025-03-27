@@ -3,7 +3,10 @@
     "type": "module",
     "version": "1.0.0-beta.1",
     "description": "Atomic is a CSS and SCSS framework based in Bootstrap",
-    "repository": "https://github.com/numaxlab/atomic",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/numaxlab/atomic.git"
+    },
     "author": "Laboratorio NUMAX",
     "license": "MIT",
     "scripts": {
