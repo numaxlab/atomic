@@ -1,6 +1,6 @@
 @layer components {
     .at-button {
-        @apply py-2 px-4 border-1 border-black;
+        @apply py-2 px-4 border-1 border-black cursor-pointer;
 
         &.is-primary {
             @apply bg-primary border-primary text-white;

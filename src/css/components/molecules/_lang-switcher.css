@@ -1,0 +1,10 @@
+@layer components {
+    .ml-lang-switcher {
+        @apply flex gap-2 mb-4 text-sm;
+
+        > li:not(:last-child)::after {
+            content: "";
+            @apply inline-block w-0.5 h-[.9rem] bg-current align-middle ms-2;
+        }
+    }
+}

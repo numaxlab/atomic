@@ -1,5 +1,11 @@
 @layer components {
     .ml-summary {
-        
+        .summary-media-wrapper {
+            @apply block mb-4;
+        }
+
+        .summary-content {
+            @apply mt-2;
+        }
     }
 }

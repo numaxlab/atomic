@@ -1,0 +1,25 @@
+@layer components {
+    .org-site-header {
+        @apply border-b border-primary mb-10 py-6 flex justify-between items-end;
+
+        .site-header-nav {
+            @apply hidden flex-col items-end;
+
+            @variant lg {
+                @apply flex;
+            }
+        }
+
+        .site-header-nav-toggle {
+            @apply text-xl;
+
+            @variant lg {
+                @apply hidden;
+            }
+        }
+
+        .site-header-main-menu {
+            @apply flex gap-10;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@layer base {
+    a {
+        @apply text-primary no-underline;
+
+        @variant hover {
+            @apply underline;
+        }
+    }
+}

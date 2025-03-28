@@ -17,5 +17,7 @@
 @import "./molecules/_banner.css";
 @import "./molecules/_breadcrumb.css";
 @import "./molecules/_summary.css";
+@import "./molecules/_lang-switcher.css";
 
 /* Organisms */
+@import "./organisms/_site-header.css";
