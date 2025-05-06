@@ -1,0 +1,9 @@
+@layer components {
+    .org-site-footer {
+        @apply py-10 mt-10;
+
+        @variant lg {
+            @apply flex justify-between;
+        }
+    }
+}

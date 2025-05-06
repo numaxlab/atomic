@@ -1,0 +1,9 @@
+@layer components {
+    .ml-table {
+        @apply w-full;
+
+        th {
+            @apply text-left;
+        }
+    }
+}

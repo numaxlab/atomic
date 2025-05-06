@@ -1,6 +1,6 @@
-import '../src/css/atomic.css'
-import '../src/css/fonts.css'
-import '../src/css/icons.css'
+import '../src/js/atomic';
+import '../src/css/fonts.css';
+import '../src/css/icons.css';
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {
@@ -32,6 +32,6 @@ const preview = {
         },
         tags: ['autodocs'],
     },
-}
+};
 
-export default preview
+export default preview;

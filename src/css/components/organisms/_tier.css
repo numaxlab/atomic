@@ -1,0 +1,11 @@
+@layer components {
+    .org-tier {
+        .tier-header {
+            @apply border-b border-primary mb-5 py-2 flex justify-between items-end;
+        }
+
+        .tier-header-actions {
+            @apply flex;
+        }
+    }
+}

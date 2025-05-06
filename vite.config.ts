@@ -7,11 +7,10 @@ export default defineConfig({
     ],
     build: {
         lib: {
-            entry: "./src/css/atomic.css",
+            entry: "./src/js/atomic.js",
             name: "NumaxLab Atomic",
-            fileName: "atomic",
+            fileName: "main",
             formats: ["es"],
-        },
-        cssCodeSplit: true
+        }
     },
 });

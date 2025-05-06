@@ -17,7 +17,7 @@ const meta: Meta<TypographyArgs> = {
             '<p><strong>Esta liña é tratada coma un texto que ten importancia (e vese en negriña).</strong></p>' +
             '<p><em>Esta liña é tratada coma un texto con énfase (e vese en cursiva).</em></p>' +
             '<p>Podes empregar a ediqueta <code>abbr</code> para abreviaturas e acrónimos: <abbr title="Mozilla Developer Network">MDN</abbr>.</p>' +
-            '<hr>' +
+            '<hr class="my-3">' +
             '<ul class="list-disc pl-4">\n' +
             '  <li>Isto é unha lista.</li>\n' +
             '  <li>Segundo elemento.</li>\n' +

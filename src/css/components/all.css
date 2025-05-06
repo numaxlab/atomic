@@ -18,6 +18,10 @@
 @import "./molecules/_breadcrumb.css";
 @import "./molecules/_summary.css";
 @import "./molecules/_lang-switcher.css";
+@import "./molecules/_table.css";
 
 /* Organisms */
 @import "./organisms/_site-header.css";
+@import "./organisms/_site-footer.css";
+@import "./organisms/_tier.css";
+@import "./organisms/_accordion.css";

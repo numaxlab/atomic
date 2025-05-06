@@ -11,8 +11,8 @@ const meta: Meta<SummaryArgs> = {
     title: 'Molecules/Summary',
     tags: ['autodocs'],
     render: (args) => {
-        const row = document.createElement('div')
-        const col = document.createElement('div')
+        const row = document.createElement('ul')
+        const col = document.createElement('li')
 
         const summary = document.createElement('article')
         const heading = document.createElement('h2')
@@ -50,8 +50,7 @@ const meta: Meta<SummaryArgs> = {
             summary.appendChild(content)
         }
 
-        row.className = 'flex'
-        col.className = 'w-1/3'
+        row.className = 'md:grid md:grid-cols-3 md:gap-4'
 
         col.appendChild(summary)
         row.appendChild(col)

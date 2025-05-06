@@ -22,7 +22,7 @@ const meta: Meta<BannerArgs> = {
         const text = document.createElement('div')
 
         text.className = 'banner-text'
-        heading.className = 'at-heading'
+        heading.className = 'at-heading is-2'
         content.className = 'banner-content'
         a.className = 'banner-inner-wrapper'
         a.setAttribute('href', '#')

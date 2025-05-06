@@ -13,5 +13,11 @@
         &.has-media .banner-background-overlay {
             @apply absolute inset-0 bg-no-repeat bg-cover bg-center;
         }
+
+        a {
+            @variant hover {
+                @apply no-underline;
+            }
+        }
     }
 }

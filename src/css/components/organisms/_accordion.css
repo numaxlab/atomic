@@ -1,0 +1,17 @@
+@layer components {
+    .org-accordion {
+        @apply border-t border-primary;
+
+        .accordion-header {
+            @apply border-b border-primary;
+        }
+
+        .accordion-control {
+            @apply w-full text-left flex justify-between items-center py-2 pe-5 cursor-pointer;
+        }
+
+        .accordion-panel {
+            @apply py-4 border-b border-primary;
+        }
+    }
+}

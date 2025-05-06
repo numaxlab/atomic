@@ -1,14 +1,14 @@
 @layer components {
     .ml-breadcrumb {
-        > li {
+        ol > li {
             @apply inline-block;
         }
 
-        > li:not(:last-child) {
+        ol > li:not(:last-child) {
             @apply mr-2;
         }
 
-        > li:not(:last-child)::after {
+        ol > li:not(:last-child)::after {
             content: "";
             @apply inline-block border-1 border-current h-3 -skew-x-35 ml-2;
         }
