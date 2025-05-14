@@ -69,8 +69,12 @@ const meta: Meta<FormsArgs> = {
             '<label class="at-label" for="flexCheckDefault">Checkbox</label>' +
             '</div>' +
             '<div class="md:w-1/3 mb-4">' +
-            '<input class="at-form-control is-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">' +
-            '<label class="at-label" for="flexRadioDefault1">Radio</label>' +
+            '<input class="at-form-control is-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1">' +
+            '<label class="at-label" for="flexRadioDefault1">Radio 1</label>' +
+            '</div>' +
+            '<div class="md:w-1/3 mb-4">' +
+            '<input class="at-form-control is-check" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2">' +
+            '<label class="at-label" for="flexRadioDefault2">Radio 2</label>' +
             '</div>' +
             '</div>' +
             '<div class="mb-4">' +

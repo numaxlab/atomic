@@ -20,7 +20,7 @@ const meta: Meta<CarouselArgs> = {
         carousel.ariaRoleDescription = 'carrusel';
         carousel.ariaLabel = 'Título do carrusel de imaxes';
 
-        carouselInner.className = 'carousel-inner-wrapper';
+        carouselInner.className = 'carousel-inner-wrapper h-100';
 
         carouselControls.className = 'carousel-controls-wrapper';
         rotationButton.className = 'at-button is-primary';
@@ -41,7 +41,7 @@ const meta: Meta<CarouselArgs> = {
         carouselControls.appendChild(previousButton);
         carouselControls.appendChild(nextButton);
 
-        carouselSlides.className = 'carousel-slides-wrapper';
+        carouselSlides.className = 'carousel-slides-wrapper gap-5';
         carouselSlides.id = 'carouselSlides';
         carouselSlides.ariaLive = 'off';
 
@@ -51,6 +51,9 @@ const meta: Meta<CarouselArgs> = {
             const carouselSlideContent = document.createElement('div');
 
             carouselSlide.className = 'carousel-slide';
+            if (i === 1) {
+                carouselSlide.className += ' is-active';
+            }
             carouselSlide.role = 'group';
             carouselSlide.ariaRoleDescription = 'diapositiva';
             carouselSlide.ariaLabel = `${i} de 5`;

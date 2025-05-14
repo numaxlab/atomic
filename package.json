@@ -1,7 +1,7 @@
 {
     "name": "@numaxlab/atomic",
     "type": "module",
-    "version": "1.0.0-beta.4",
+    "version": "1.0.0-beta.5",
     "description": "Atomic is a CSS framework based in Tailwind CSS",
     "repository": {
         "type": "git",

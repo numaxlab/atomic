@@ -1,0 +1,21 @@
+.org-carousel {
+    .carousel-inner-wrapper {
+        @apply relative;
+    }
+
+    .carousel-controls-wrapper {
+        @apply absolute z-1 flex;
+    }
+
+    .carousel-slides-wrapper {
+        @apply absolute top-0 left-0 w-full h-full flex overflow-hidden;
+    }
+
+    .carousel-item {
+        @apply hidden;
+
+        &.is-active {
+            @apply block;
+        }
+    }
+}
