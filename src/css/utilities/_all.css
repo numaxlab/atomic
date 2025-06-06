@@ -3,3 +3,19 @@
         @apply absolute top-1/2 left-1/2 -translate-1/2 size-12;
     }
 }
+
+@utility heading1 {
+    @apply font-bold text-lg text-5xl;
+}
+
+@utility heading2 {
+    @apply font-bold text-lg text-4xl;
+}
+
+@utility heading3 {
+    @apply font-bold text-lg text-3xl;
+}
+
+@utility heading4 {
+    @apply font-bold text-lg text-2xl;
+}

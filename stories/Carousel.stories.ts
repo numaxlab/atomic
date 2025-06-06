@@ -19,6 +19,7 @@ const meta: Meta<CarouselArgs> = {
         carousel.className = 'org-carousel';
         carousel.ariaRoleDescription = 'carrusel';
         carousel.ariaLabel = 'Título do carrusel de imaxes';
+        carousel.setAttribute('x-data', 'carousel({ autoplay: true, autoplayDelay: 4000, loop: true, slidesPerView: 1 })');
 
         carouselInner.className = 'carousel-inner-wrapper h-100';
 
@@ -26,16 +27,19 @@ const meta: Meta<CarouselArgs> = {
         rotationButton.className = 'at-button is-primary';
         rotationButton.type = 'button';
         rotationButton.ariaLabel = 'Parar o cambio automático de diapositiva';
+        rotationButton.setAttribute('x-on:click', 'togglePlayPause()');
         rotationButton.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i>';
         previousButton.className = 'at-button is-primary';
         previousButton.type = 'button';
         previousButton.ariaLabel = 'Anterior diapositiva';
         previousButton.setAttribute('aria-controls', 'carouselSlides');
+        previousButton.setAttribute('x-on:click', 'prevSlide()');
         previousButton.innerHTML = '<i class="fa-solid fa-arrow-left" aria-hidden="true"></i>';
         nextButton.className = 'at-button is-primary';
         nextButton.type = 'button';
         nextButton.ariaLabel = 'Seguinte diapositiva';
         nextButton.setAttribute('aria-controls', 'carouselSlides');
+        nextButton.setAttribute('x-on:click', 'nextSlide()');
         nextButton.innerHTML = '<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
         carouselControls.appendChild(rotationButton);
         carouselControls.appendChild(previousButton);
@@ -44,6 +48,7 @@ const meta: Meta<CarouselArgs> = {
         carouselSlides.className = 'carousel-slides-wrapper gap-5';
         carouselSlides.id = 'carouselSlides';
         carouselSlides.ariaLive = 'off';
+        carouselSlides.setAttribute(':style', 'transformStyle');
 
         for (let i = 1; i <= 5; i++) {
             const carouselSlide = document.createElement('div');

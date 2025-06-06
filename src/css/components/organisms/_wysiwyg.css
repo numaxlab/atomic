@@ -1,0 +1,32 @@
+@layer components {
+    .org-wysiwyg {
+        p {
+            @apply mb-3;
+        }
+
+        ul, ol {
+            @apply mb-3;
+            @apply pl-6;
+        }
+
+        ul {
+            @apply list-disc;
+        }
+
+        ol {
+            @apply list-decimal;
+        }
+
+        h2 {
+            @apply heading2;
+        }
+
+        h3 {
+            @apply heading3;
+        }
+
+        h4 {
+            @apply heading4;
+        }
+    }
+}

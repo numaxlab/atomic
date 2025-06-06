@@ -3,10 +3,10 @@
         @apply border-b border-primary mb-10 py-6 flex justify-between items-end;
 
         .site-header-nav {
-            @apply hidden flex-col items-end;
+            @apply hidden flex-col items-end w-full;
 
             @variant lg {
-                @apply flex;
+                @apply flex w-auto;
             }
         }
 

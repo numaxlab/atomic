@@ -1,14 +1,14 @@
 .org-carousel {
     .carousel-inner-wrapper {
-        @apply relative;
+        @apply relative overflow-hidden;
     }
 
     .carousel-controls-wrapper {
-        @apply absolute z-1 flex;
+        @apply absolute z-1 top-0 right-0 p-4 flex space-x-2;
     }
 
     .carousel-slides-wrapper {
-        @apply absolute top-0 left-0 w-full h-full flex overflow-hidden;
+        @apply absolute top-0 left-0 w-full h-full flex transition-transform duration-500 ease-in-out;
     }
 
     .carousel-item {
