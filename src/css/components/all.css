@@ -7,9 +7,6 @@
 @import "./atoms/_description-list.css";
 @import "./atoms/_image.css";
 @import "./atoms/_tag.css";
-@import "./atoms/form/_label.css";
-@import "./atoms/form/_form-control.css";
-@import "./atoms/form/_form-control-description.css";
 
 /* Molecules */
 @import "./molecules/form/_fieldset.css";

@@ -1,5 +1,0 @@
-@layer components {
-    .at-label {
-        @apply text-sm;
-    }
-}

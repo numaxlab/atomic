@@ -4,3 +4,5 @@
 @import "./base/_preflight.css";
 @import "./utilities/_all.css";
 @import "./components/all.css";
+
+@plugin "@tailwindcss/forms";
