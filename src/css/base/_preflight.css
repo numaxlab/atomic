@@ -22,6 +22,10 @@
         }
     }
 
+    button {
+        @apply cursor-pointer;
+    }
+
     [x-cloak] {
         display: none !important;
     }
