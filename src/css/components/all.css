@@ -16,6 +16,7 @@
 @import "./molecules/_summary.css";
 @import "./molecules/_lang-switcher.css";
 @import "./molecules/_table.css";
+@import "./molecules/_dropdown.css";
 
 /* Organisms */
 @import "./organisms/_site-header.css";

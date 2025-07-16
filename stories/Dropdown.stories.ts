@@ -1,25 +1,25 @@
-import type { Meta, StoryObj } from '@storybook/html'
+import type {Meta, StoryObj} from '@storybook/html'
 
 type DropdownArgs = {
-  label: string;
+    label: string;
 };
 
 const meta: Meta<DropdownArgs> = {
-  title: 'Molecules/Dropdown',
-  tags: ['autodocs'],
-  render: (args) => {
-    const dropdown = document.createElement('ul')
+    title: 'Molecules/Dropdown',
+    tags: ['autodocs'],
+    render: (args) => {
+        const dropdown = document.createElement('div')
 
-    dropdown.className = ['ml-dropdown'].join(' ')
+        dropdown.className = ['ml-dropdown'].join(' ')
 
-    return dropdown
-  },
-  argTypes: {
-    label: { control: 'text' },
-  },
-  args: {
-    label: 'Dropdown',
-  },
+        return dropdown
+    },
+    argTypes: {
+        label: {control: 'text'},
+    },
+    args: {
+        label: 'Dropdown',
+    },
 }
 
 export default meta
@@ -27,7 +27,7 @@ export default meta
 type Story = StoryObj<DropdownArgs>;
 
 export const DropdownStories: Story = {
-  args: {
-    label: 'Dropdown',
-  },
+    args: {
+        label: 'Dropdown',
+    },
 }

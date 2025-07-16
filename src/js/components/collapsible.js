@@ -2,7 +2,7 @@ export default () => ({
     toggle () {
         const isExpanded = this.$el.getAttribute('aria-expanded') === 'true';
         const controlsTarget = this.$root.querySelector('#' + this.$el.getAttribute('aria-controls'));
-        const icon = this.$el.querySelector('.accordion-icon');
+        const icon = this.$el.querySelector('.collapsible-icon');
 
         if (isExpanded) {
             controlsTarget.setAttribute('hidden', true);
@@ -15,8 +15,8 @@ export default () => ({
         if (icon) {
             const altIcon = icon.dataset.alt;
 
-            icon.dataset.alt = Array.from(icon.classList).filter(cls => cls !== 'accordion-icon').join(' ');
-            icon.classList.remove(...Array.from(icon.classList).filter(cls => cls !== 'accordion-icon'));
+            icon.dataset.alt = Array.from(icon.classList).filter(cls => cls !== 'collapsible-icon').join(' ');
+            icon.classList.remove(...Array.from(icon.classList).filter(cls => cls !== 'collapsible-icon'));
             icon.classList.add(...altIcon.split(' '));
         }
     },

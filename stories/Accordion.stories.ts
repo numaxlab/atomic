@@ -9,7 +9,7 @@ const meta: Meta<AccordionArgs> = {
         const accordion = document.createElement('div');
 
         accordion.className = ['org-accordion'].join(' ');
-        accordion.setAttribute('x-data', 'accordion');
+        accordion.setAttribute('x-data', 'collapsible');
 
         for (let i = 0; i < 3; i++) {
             let accordionHeader = document.createElement('h3');
@@ -32,7 +32,7 @@ const meta: Meta<AccordionArgs> = {
 
             accordionControl.innerHTML = `
                 Item ${i}
-                <i class="accordion-icon fa-solid fa-caret-down" data-alt="fa-solid fa-caret-up" aria-hidden="true"></i>
+                <i class="collapsible-icon fa-solid fa-caret-down" data-alt="fa-solid fa-caret-up" aria-hidden="true"></i>
             `;
 
             accordionPanel.innerHTML = `
