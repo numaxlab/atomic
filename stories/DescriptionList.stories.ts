@@ -2,6 +2,7 @@ import type {Meta, StoryObj} from '@storybook/html'
 
 type DescriptionListArgs = {
     items: number;
+    grid: boolean;
 };
 
 const meta: Meta<DescriptionListArgs> = {
@@ -10,6 +11,10 @@ const meta: Meta<DescriptionListArgs> = {
     render: (args) => {
         const descriptionList = document.createElement('dl')
         descriptionList.classList.add('at-description-list')
+
+        if (args.grid) {
+            descriptionList.classList.add('is-grid')
+        }
 
         for (let i = 1; i <= args.items; i++) {
             const dt = document.createElement('dt')
@@ -28,9 +33,11 @@ const meta: Meta<DescriptionListArgs> = {
         items: {
             control: {type: 'number', min: 2, max: 10, step: 1},
         },
+        grid: {control: 'boolean'},
     },
     args: {
         items: 2,
+        grid: false
     },
 }
 
@@ -41,5 +48,6 @@ type Story = StoryObj<DescriptionListArgs>;
 export const Single: Story = {
     args: {
         items: 2,
+        grid: false
     },
 }

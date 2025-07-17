@@ -1,9 +1,17 @@
 @layer components {
     .at-blockquote {
-        @apply border-s-2 border-secondary-light pl-2 text-base;
+        @apply text-base;
 
         .blockquote-footer {
-            @apply text-sm text-secondary;
+            @apply text-sm text-primary;
+        }
+
+        &.has-icon {
+            @apply pl-10 relative;
+
+            .blockquote-icon {
+                @apply absolute top-0 left-0;
+            }
         }
     }
 }

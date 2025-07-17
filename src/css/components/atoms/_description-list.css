@@ -3,5 +3,17 @@
         dt {
             @apply font-bold;
         }
+
+        &.is-grid {
+            @apply grid grid-cols-3;
+
+            dt {
+                @apply col-span-1;
+            }
+
+            dd {
+                @apply col-span-2;
+            }
+        }
     }
 }
