@@ -1,5 +1,6 @@
 @layer components {
     .at-heading {
+        font-family: var(--font-titles);
         @apply font-bold text-lg;
 
         &.is-1 {
