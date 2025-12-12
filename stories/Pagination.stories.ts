@@ -1,70 +1,68 @@
-import type { Meta, StoryObj } from '@storybook/html'
+import type { Meta, StoryObj } from "@storybook/html";
 
-type PaginationArgs = {};
+const meta: Meta = {
+    title: "Molecules/Pagination",
+    render: () => {
+        const pagination = document.createElement("nav");
+        const ul = document.createElement("ul");
 
-const meta: Meta<PaginationArgs> = {
-  title: 'Molecules/Pagination',
-  render: (args) => {
-    const pagination = document.createElement('nav')
-    const ul = document.createElement('ul')
+        pagination.className = ["ml-pagination"].join(" ");
+        pagination.ariaLabel = "Paxinación dos resultados da busca";
 
-    pagination.className = ['ml-pagination'].join(' ')
-    pagination.ariaLabel = 'Paxinación dos resultados da busca'
+        ul.className = "pagination";
 
-    ul.className = 'pagination'
+        const prevLi = document.createElement("li");
+        const prevA = document.createElement("a");
 
-    const prevLi = document.createElement('li')
-    const prevA = document.createElement('a')
+        prevA.innerText = "Anterior";
+        prevA.className = "page-link";
+        prevLi.className = "page-item disabled";
 
-    prevA.innerText = 'Anterior'
-    prevA.className = 'page-link'
-    prevLi.className = 'page-item disabled'
+        prevLi.appendChild(prevA);
+        ul.appendChild(prevLi);
 
-    prevLi.appendChild(prevA)
-    ul.appendChild(prevLi)
+        for (let i = 1; i <= 5; i++) {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
 
-    for (let i = 1; i <= 5; i++) {
-      const li = document.createElement('li')
-      const a = document.createElement('a')
+            a.innerText = i.toString();
+            a.className = "page-link";
+            li.className = "page-item";
 
-      a.innerText = i.toString()
-      a.className = 'page-link'
-      li.className = 'page-item'
+            if (i === 1) {
+                li.className += " active";
+                li.ariaCurrent = "page";
+            } else {
+                a.href = "#";
+            }
 
-      if (i === 1) {
-        li.className += ' active'
-        li.ariaCurrent = 'page'
-      } else {
-        a.href = '#'
-      }
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
 
-      li.appendChild(a)
-      ul.appendChild(li)
-    }
+        const nextLi = document.createElement("li");
+        const nextA = document.createElement("a");
 
-    const nextLi = document.createElement('li')
-    const nextA = document.createElement('a')
+        nextA.innerText = "Seguinte";
+        nextA.className = "page-link";
+        nextA.href = "#";
+        nextLi.className = "page-item";
 
-    nextA.innerText = 'Seguinte'
-    nextA.className = 'page-link'
-    nextA.href = '#'
-    nextLi.className = 'page-item'
+        nextLi.appendChild(nextA);
+        ul.appendChild(nextLi);
 
-    nextLi.appendChild(nextA)
-    ul.appendChild(nextLi)
+        pagination.appendChild(ul);
 
-    pagination.appendChild(ul)
+        return pagination;
+    },
+    argTypes: {},
+    args: {},
+};
 
-    return pagination
-  },
-  argTypes: {},
-  args: {},
-}
+export default meta;
 
-export default meta
-
-type Story = StoryObj<PaginationArgs>;
+type Story = StoryObj;
 
 export const Single: Story = {
-  args: {},
-}
+    args: {},
+};

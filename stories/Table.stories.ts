@@ -1,19 +1,15 @@
-import type {Meta, StoryObj} from '@storybook/html'
+import type { Meta, StoryObj } from "@storybook/html";
 
-type TableArgs = {
-    caption: string;
-};
+const meta: Meta = {
+    title: "Molecules/Table",
+    tags: ["autodocs"],
+    render: () => {
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const tbody = document.createElement("tbody");
+        const tfoot = document.createElement("tfoot");
 
-const meta: Meta<TableArgs> = {
-    title: 'Molecules/Table',
-    tags: ['autodocs'],
-    render: (args) => {
-        const table = document.createElement('table')
-        const thead = document.createElement('thead')
-        const tbody = document.createElement('tbody')
-        const tfoot = document.createElement('tfoot')
-
-        table.className = ['ml-table'].join(' ')
+        table.className = ["ml-table"].join(" ");
 
         thead.innerHTML = `
       <tr>
@@ -22,7 +18,7 @@ const meta: Meta<TableArgs> = {
         <th>Cantidade</th>
         <th>Etiquetas</th>
       </tr>
-    `
+    `;
 
         for (let i = 0; i < 4; i++) {
             tbody.innerHTML += `
@@ -35,29 +31,29 @@ const meta: Meta<TableArgs> = {
                     <span class="at-tag is-secondary">Etiqueta 2</span>
                 </td>
               </tr>
-            `
+            `;
         }
 
-        table.appendChild(thead)
-        table.appendChild(tbody)
-        table.appendChild(tfoot)
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        table.appendChild(tfoot);
 
-        return table
+        return table;
     },
     argTypes: {
-        caption: {control: 'text'},
+        caption: { control: "text" },
     },
     args: {
-        caption: 'Table',
+        caption: "Table",
     },
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<TableArgs>;
+type Story = StoryObj;
 
 export const TableStories: Story = {
     args: {
-        caption: 'Table',
+        caption: "Table",
     },
-}
+};

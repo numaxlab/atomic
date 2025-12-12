@@ -1,52 +1,53 @@
-import type { Meta, StoryObj } from '@storybook/html'
-import variants from './variants'
+import type { Meta, StoryObj } from "@storybook/html";
+
+import variants from "./variants";
 
 type TagArgs = {
-  tag: string;
-  variant: string;
-  label: string;
+    tag: string;
+    variant: string;
+    label: string;
 };
 
 const meta: Meta<TagArgs> = {
-  title: 'Atoms/Tag',
-  tags: ['autodocs'],
-  render: (args) => {
-    const tag = document.createElement(args.tag)
-    tag.innerText = args.label
+    title: "Atoms/Tag",
+    tags: ["autodocs"],
+    render: (args) => {
+        const tag = document.createElement(args.tag);
+        tag.innerText = args.label;
 
-    if (args.tag === 'a') {
-      tag.setAttribute('href', '#')
-    }
+        if (args.tag === "a") {
+            tag.setAttribute("href", "#");
+        }
 
-    tag.className = ['at-tag', args.variant].join(' ')
+        tag.className = ["at-tag", args.variant].join(" ");
 
-    return tag
-  },
-  argTypes: {
-    label: { control: 'text' },
-    tag: {
-      control: { type: 'select' },
-      options: ['a', 'span'],
+        return tag;
     },
-    variant: {
-      control: { type: 'select' },
-      options: variants,
+    argTypes: {
+        label: { control: "text" },
+        tag: {
+            control: { type: "select" },
+            options: ["a", "span"],
+        },
+        variant: {
+            control: { type: "select" },
+            options: variants,
+        },
     },
-  },
-  args: {
-    tag: 'a',
-    label: 'tag',
-  },
-}
+    args: {
+        tag: "a",
+        label: "tag",
+    },
+};
 
-export default meta
+export default meta;
 
 type Story = StoryObj<TagArgs>;
 
 export const TagStories: Story = {
-  args: {
-    tag: 'a',
-    label: 'Lorem ipsum',
-    variant: 'is-primary',
-  },
-}
+    args: {
+        tag: "a",
+        label: "Lorem ipsum",
+        variant: "is-primary",
+    },
+};

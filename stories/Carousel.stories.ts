@@ -1,74 +1,77 @@
-import type {Meta, StoryObj} from '@storybook/html';
+import type { Meta, StoryObj } from "@storybook/html";
 
-type CarouselArgs = {};
-
-const meta: Meta<CarouselArgs> = {
-    title: 'Organisms/Carousel',
-    tags: ['autodocs'],
-    render: (args) => {
+const meta: Meta = {
+    title: "Organisms/Carousel",
+    tags: ["autodocs"],
+    render: () => {
         // https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-2-tablist/
         // https://www.smashingmagazine.com/2023/02/guide-building-accessible-carousels/
-        const carousel = document.createElement('section');
-        const carouselInner = document.createElement('div');
-        const carouselControls = document.createElement('div');
-        const carouselSlides = document.createElement('div');
-        const rotationButton = document.createElement('button');
-        const previousButton = document.createElement('button');
-        const nextButton = document.createElement('button');
+        const carousel = document.createElement("section");
+        const carouselInner = document.createElement("div");
+        const carouselControls = document.createElement("div");
+        const carouselSlides = document.createElement("div");
+        const rotationButton = document.createElement("button");
+        const previousButton = document.createElement("button");
+        const nextButton = document.createElement("button");
 
-        carousel.className = 'org-carousel';
-        carousel.ariaRoleDescription = 'carrusel';
-        carousel.ariaLabel = 'Título do carrusel de imaxes';
-        carousel.setAttribute('x-data', 'carousel({ autoplay: true, autoplayDelay: 4000, loop: true, slidesPerView: 1 })');
+        carousel.className = "org-carousel";
+        carousel.ariaRoleDescription = "carrusel";
+        carousel.ariaLabel = "Título do carrusel de imaxes";
+        carousel.setAttribute(
+            "x-data",
+            "carousel({ autoplay: true, autoplayDelay: 4000, loop: true, slidesPerView: 1 })",
+        );
 
-        carouselInner.className = 'carousel-inner-wrapper h-100';
+        carouselInner.className = "carousel-inner-wrapper h-100";
 
-        carouselControls.className = 'carousel-controls-wrapper';
-        rotationButton.className = 'at-button is-primary';
-        rotationButton.type = 'button';
-        rotationButton.ariaLabel = 'Parar o cambio automático de diapositiva';
-        rotationButton.setAttribute('x-on:click', 'togglePlayPause()');
+        carouselControls.className = "carousel-controls-wrapper";
+        rotationButton.className = "at-button is-primary";
+        rotationButton.type = "button";
+        rotationButton.ariaLabel = "Parar o cambio automático de diapositiva";
+        rotationButton.setAttribute("x-on:click", "togglePlayPause()");
         rotationButton.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i>';
-        previousButton.className = 'at-button is-primary';
-        previousButton.type = 'button';
-        previousButton.ariaLabel = 'Anterior diapositiva';
-        previousButton.setAttribute('aria-controls', 'carouselSlides');
-        previousButton.setAttribute('x-on:click', 'prevSlide()');
+        previousButton.className = "at-button is-primary";
+        previousButton.type = "button";
+        previousButton.ariaLabel = "Anterior diapositiva";
+        previousButton.setAttribute("aria-controls", "carouselSlides");
+        previousButton.setAttribute("x-on:click", "prevSlide()");
         previousButton.innerHTML = '<i class="fa-solid fa-arrow-left" aria-hidden="true"></i>';
-        nextButton.className = 'at-button is-primary';
-        nextButton.type = 'button';
-        nextButton.ariaLabel = 'Seguinte diapositiva';
-        nextButton.setAttribute('aria-controls', 'carouselSlides');
-        nextButton.setAttribute('x-on:click', 'nextSlide()');
+        nextButton.className = "at-button is-primary";
+        nextButton.type = "button";
+        nextButton.ariaLabel = "Seguinte diapositiva";
+        nextButton.setAttribute("aria-controls", "carouselSlides");
+        nextButton.setAttribute("x-on:click", "nextSlide()");
         nextButton.innerHTML = '<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
         carouselControls.appendChild(rotationButton);
         carouselControls.appendChild(previousButton);
         carouselControls.appendChild(nextButton);
 
-        carouselSlides.className = 'carousel-slides-wrapper gap-5';
-        carouselSlides.id = 'carouselSlides';
-        carouselSlides.ariaLive = 'off';
-        carouselSlides.setAttribute(':style', 'transformStyle');
+        carouselSlides.className = "carousel-slides-wrapper gap-5";
+        carouselSlides.id = "carouselSlides";
+        carouselSlides.ariaLive = "off";
+        carouselSlides.setAttribute(":style", "transformStyle");
 
         for (let i = 1; i <= 5; i++) {
-            const carouselSlide = document.createElement('div');
-            const carouselSlideMedia = document.createElement('a');
-            const carouselSlideContent = document.createElement('div');
+            const carouselSlide = document.createElement("div");
+            const carouselSlideMedia = document.createElement("a");
+            const carouselSlideContent = document.createElement("div");
 
-            carouselSlide.className = 'carousel-slide';
+            carouselSlide.className = "carousel-slide";
             if (i === 1) {
-                carouselSlide.className += ' is-active';
+                carouselSlide.className += " is-active";
             }
-            carouselSlide.role = 'group';
-            carouselSlide.ariaRoleDescription = 'diapositiva';
+            carouselSlide.role = "group";
+            carouselSlide.ariaRoleDescription = "diapositiva";
             carouselSlide.ariaLabel = `${i} de 5`;
 
-            carouselSlideMedia.className = 'carousel-slide-media-wrapper';
-            carouselSlideMedia.href = '#';
-            carouselSlideMedia.innerHTML = '<img src="https://picsum.photos/720/521" alt="Título da imaxe ou da diapositiva">';
+            carouselSlideMedia.className = "carousel-slide-media-wrapper";
+            carouselSlideMedia.href = "#";
+            carouselSlideMedia.innerHTML =
+                '<img src="https://picsum.photos/720/521" alt="Título da imaxe ou da diapositiva">';
 
-            carouselSlideContent.className = 'carousel-slide-content-wrapper';
-            carouselSlideContent.innerHTML = '<h3><a href="#">Título da diapositiva</a></h3><p>Outro texto sobre a diapositiva</p>';
+            carouselSlideContent.className = "carousel-slide-content-wrapper";
+            carouselSlideContent.innerHTML =
+                '<h3><a href="#">Título da diapositiva</a></h3><p>Outro texto sobre a diapositiva</p>';
 
             carouselSlide.appendChild(carouselSlideMedia);
             carouselSlide.appendChild(carouselSlideContent);
@@ -85,9 +88,9 @@ const meta: Meta<CarouselArgs> = {
     args: {},
 };
 
-export default meta
+export default meta;
 
-type Story = StoryObj<CarouselArgs>;
+type Story = StoryObj;
 
 export const CarouselStories: Story = {
     args: {},

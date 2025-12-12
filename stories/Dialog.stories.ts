@@ -1,15 +1,13 @@
-import type {Meta, StoryObj} from '@storybook/html';
+import type { Meta, StoryObj } from "@storybook/html";
 
-type DialogArgs = {};
+const meta: Meta = {
+    title: "Organisms/Dialog",
+    tags: ["autodocs"],
+    render: () => {
+        const button = document.createElement("button");
 
-const meta: Meta<DialogArgs> = {
-    title: 'Organisms/Dialog',
-    tags: ['autodocs'],
-    render: (args) => {
-        const button = document.createElement('button');
-
-        button.className = 'at-button is-primary';
-        button.innerText = 'Abrir diálogo';
+        button.className = "at-button is-primary";
+        button.innerText = "Abrir diálogo";
 
         return button;
     },
@@ -17,9 +15,9 @@ const meta: Meta<DialogArgs> = {
     args: {},
 };
 
-export default meta
+export default meta;
 
-type Story = StoryObj<DialogArgs>;
+type Story = StoryObj;
 
 export const DialogStories: Story = {
     args: {},

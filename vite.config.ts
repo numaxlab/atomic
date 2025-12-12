@@ -7,10 +7,12 @@ export default defineConfig({
     ],
     build: {
         lib: {
-            entry: "./src/js/atomic.js",
+            entry: "./src/js/atomic.ts",
             name: "NumaxLab Atomic",
             fileName: "main",
             formats: ["es"],
-        }
+        },
+        minify: 'terser',
+        sourcemap: true,
     },
 });

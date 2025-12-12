@@ -1,4 +1,4 @@
-import type {Meta, StoryObj} from '@storybook/html'
+import type { Meta, StoryObj } from "@storybook/html";
 
 type DescriptionListArgs = {
     items: number;
@@ -6,48 +6,48 @@ type DescriptionListArgs = {
 };
 
 const meta: Meta<DescriptionListArgs> = {
-    title: 'Atoms/Description List',
-    tags: ['autodocs'],
+    title: "Atoms/Description List",
+    tags: ["autodocs"],
     render: (args) => {
-        const descriptionList = document.createElement('dl')
-        descriptionList.classList.add('at-description-list')
+        const descriptionList = document.createElement("dl");
+        descriptionList.classList.add("at-description-list");
 
         if (args.grid) {
-            descriptionList.classList.add('is-grid')
+            descriptionList.classList.add("is-grid");
         }
 
         for (let i = 1; i <= args.items; i++) {
-            const dt = document.createElement('dt')
-            const dd = document.createElement('dd')
+            const dt = document.createElement("dt");
+            const dd = document.createElement("dd");
 
-            dt.innerText = 'Termo ' + i
-            dd.innerText = 'Descrición ' + i
+            dt.innerText = `Termo ${i}`;
+            dd.innerText = `Descrición ${i}`;
 
-            descriptionList.appendChild(dt)
-            descriptionList.appendChild(dd)
+            descriptionList.appendChild(dt);
+            descriptionList.appendChild(dd);
         }
 
-        return descriptionList
+        return descriptionList;
     },
     argTypes: {
         items: {
-            control: {type: 'number', min: 2, max: 10, step: 1},
+            control: { type: "number", min: 2, max: 10, step: 1 },
         },
-        grid: {control: 'boolean'},
+        grid: { control: "boolean" },
     },
     args: {
         items: 2,
-        grid: false
+        grid: false,
     },
-}
+};
 
-export default meta
+export default meta;
 
 type Story = StoryObj<DescriptionListArgs>;
 
 export const Single: Story = {
     args: {
         items: 2,
-        grid: false
+        grid: false,
     },
-}
+};

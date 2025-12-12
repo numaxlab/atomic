@@ -1,14 +1,12 @@
-import type {Meta, StoryObj} from '@storybook/html';
+import type { Meta, StoryObj } from "@storybook/html";
 
-type TabsArgs = {};
+const meta: Meta = {
+    title: "Organisms/Tabs",
+    tags: ["autodocs"],
+    render: () => {
+        const tabs = document.createElement("div");
 
-const meta: Meta<TabsArgs> = {
-    title: 'Organisms/Tabs',
-    tags: ['autodocs'],
-    render: (args) => {
-        const tabs = document.createElement('div');
-
-        tabs.className = 'org-tabs';
+        tabs.className = "org-tabs";
 
         return tabs;
     },
@@ -16,9 +14,9 @@ const meta: Meta<TabsArgs> = {
     args: {},
 };
 
-export default meta
+export default meta;
 
-type Story = StoryObj<TabsArgs>;
+type Story = StoryObj;
 
 export const TabsStories: Story = {
     args: {},
