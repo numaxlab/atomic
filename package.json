@@ -47,7 +47,7 @@
         "eslint-config-codely": "^4.5.0",
         "eslint-import-resolver-typescript": "^4.4.4",
         "prettier-plugin-tailwindcss": "^0.7.2",
-        "storybook": "^8.6.14",
+        "storybook": "^8.6.15",
         "ts-loader": "^9.5.4",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.49.0"
